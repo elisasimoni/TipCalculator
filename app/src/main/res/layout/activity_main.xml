@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".MainActivity">
+
     <ImageView
         android:id="@+id/icon_cost_of_service"
         android:layout_width="wrap_content"
@@ -42,6 +49,7 @@
 
     <TextView
         android:id="@+id/service_question"
+        style="@style/Widget.TipTime.TextView"
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
@@ -71,18 +79,21 @@
 
         <RadioButton
             android:id="@+id/option_twenty_percent"
+            style="@style/Widget.TipTime.CompoundButton.RadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/amazing_20" />
 
         <RadioButton
             android:id="@+id/option_eighteen_percent"
+            style="@style/Widget.TipTime.CompoundButton.RadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/good_18" />
 
         <RadioButton
             android:id="@+id/option_fifteen_percent"
+            style="@style/Widget.TipTime.CompoundButton.RadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ok_15" />
@@ -99,6 +110,7 @@
         app:layout_constraintBottom_toBottomOf="@id/switch_round_tip"/>
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/switch_round_tip"
+        style="@style/Widget.TipTime.CompoundButton.Switch"
         android:layout_marginStart="40dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -130,6 +142,7 @@
 
     <TextView
         android:id="@+id/tip_result"
+        style="@style/Widget.TipTime.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tip_amount"
@@ -138,3 +151,4 @@
         tools:text="Tip Amount: $10"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

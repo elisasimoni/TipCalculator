@@ -1,8 +1,12 @@
 package com.example.tipcalculator
 
 
+import android.annotation.SuppressLint
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.KeyEvent
+import android.view.View
 import com.example.tipcalculator.databinding.ActivityMainBinding
 import java.text.NumberFormat
 
@@ -39,5 +43,8 @@ class MainActivity : AppCompatActivity() {
         NumberFormat.getCurrencyInstance()
         val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
         binding.tipResult.text = getString(R.string.tip_amount, formattedTip)
+
+
+
     }
 }
